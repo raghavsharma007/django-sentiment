@@ -1,13 +1,13 @@
 {% extends 'sent/home.html' %}
 {% block result %}
     {% if polarity > 0 and  polarity  < 0.5 %}
-        <i class="large material-icons" style="margin-left: 170px; margin-top: 20px; color: white; font-size: 150px" >sentiment_satisfied</i>
+        <i class="large material-icons" style="margin-left: 170px; margin-top: 20px; color: orange; font-size: 150px" >sentiment_satisfied</i>
         {% elif  polarity  >= 0.5 and polarity  <= 1 %}
-        <i class="large material-icons" style="margin-left: 170px; margin-top: 20px; color: white; font-size: 150px">sentiment_very_satisfied</i>
+        <i class="large material-icons" style="margin-left: 170px; margin-top: 20px; color: yellow; font-size: 150px">sentiment_very_satisfied</i>
         {% elif  polarity  < 0 and polarity  > -0.5 %}
-        <i class="large material-icons" style="margin-left: 170px; margin-top: 20px; color: white; font-size: 150px">sentiment_dissatisfied</i>
+        <i class="large material-icons" style="margin-left: 170px; margin-top: 20px; color: lightgrey; font-size: 150px">sentiment_dissatisfied</i>
         {% elif  polarity  >= -1 and  polarity  <= -0.5 %}
-        <i class="large material-icons" style="margin-left: 170px; margin-top: 20px; color: white; font-size: 150px">sentiment_very_dissatisfied</i>
+        <i class="large material-icons" style="margin-left: 170px; margin-top: 20px; color: lightgrey; font-size: 150px">sentiment_very_dissatisfied</i>
         {% elif  polarity == 0 %}
         <i class="large material-icons" style="margin-left: 170px; margin-top: 20px; color: white; font-size: 150px">sentiment_neutral</i>
     {% endif %}
